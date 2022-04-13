@@ -1,0 +1,49 @@
+{
+  "name": "@wago/node-red-io-api",
+  "version": "1.0.0",
+  "description": "A set of nodes to interact directly with WAGO PFC controllers I/O bus.  Controller should be runnung the open source wago-kbus-daemon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse Cox <jesse.cox@wago.com>",
+  "contributors": [],
+  "license": "MIT",
+  "node-red": {
+    "nodes": {
+      "kbus in": "wago/kbus-in.js",
+      "kbus out": "wago/kbus-out.js",
+      "digital input": "wago/kbus_di.js",
+      "digital output": "wago/kbus_do.js",
+      "analog input": "wago/kbus_ai.js",
+      "thermocouple": "wago/kbus_tc.js",
+      "analog output": "wago/kbus_ao.js"
+    }
+  },
+  "dependencies": {
+    "is-utf8": "^0.2.1",
+    "clone": "^2.1.2"
+  },
+  "keywords": [
+    "node-red",
+    "wago",
+    "kbus",
+    "plc",
+    "codesys",
+    "automation"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessejamescox/node-red-contrib-wago.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jessejamescox/node-red-contrib-wago/issues"
+  },
+  "homepage": "https://github.com/jessejamescox/node-red-contrib-wago#readme",
+  "directories": {
+    "example": "examples"
+  }
+}

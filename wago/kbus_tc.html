@@ -1,0 +1,55 @@
+<script type="text/javascript">
+  RED.nodes.registerType("temperature sensor", {
+    category: "wago pfc",
+    color: "#C0C0C0",
+    defaults: {
+      module: { value: "", required: true},
+      channel: { value: "", required: true},
+      name: { value: "" },
+      sensor_type: { value: "TC" },
+      signal_type: { value: "Celsius" },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "module_icon.png",
+    label: function () {
+      return this.name || "temperature sensor";
+    },
+  });
+</script>
+
+<script type="text/x-red" data-template-name="temperature sensor">
+  <div class="form-row">
+      <label for="node-input-module"><i class="fa fa-hashtag"></i>Module</label>
+      <input type="text" id="node-input-module" placeholder="module number"  style="width: 150px;">
+  </div>
+  <div class="form-row">
+      <label for="node-input-channel"><i class="fa fa-hashtag"></i>Channel</label>
+      <input type="text" id="node-input-channel" placeholder="channel number"  style="width: 150px;">
+  </div>
+  <div class="form-row">
+      <label for="node-input-sensor_type"><i class="icon-tag"></i> Sensor Type</label>
+      <select type="text" id="node-input-sensor_type" placeholder="sensor_type">
+          <option value="RTD">RTD</option>
+          <option value="TC">TC</option>
+      </select>
+  </div>
+      <div class="form-row">
+      <label for="node-input-signal_type"><i class="icon-tag"></i> Signal Type</label>
+      <select type="text" id="node-input-signal_type" placeholder="signal_type">
+          <option value="Celsius">Celsius</option>
+          <option value="Farenheit">Farenheit</option>
+      </select>
+  </div>
+  <div class="form-row">
+      <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="temperature sensor">
+  <p>A node that reads temperature sensor (Thermocouple or RTD) from the WAGO PFC controller backplane.</p>
+    <br/>
+      Select the desired module and input channel, then set output measurement... <br/>
+  </p>
+</script>
