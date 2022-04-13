@@ -1,5 +1,5 @@
 <h1 style="font-weight:normal">
-  &nbsp;node-red-contrib-wago&nbsp;
+  &nbsp;@wago/node-red-api-io&nbsp;
   <a href="kbus-daemon gif"><img src=images/kbus-daemon.gif></a>
 </h1>
 
